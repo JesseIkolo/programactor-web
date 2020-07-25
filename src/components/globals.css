@@ -1,0 +1,622 @@
+/* Importing Template variables */
+@import url('./template.css');
+
+a,
+a:visited,
+input,
+input:focus {
+   color: inherit;
+   text-decoration: none;
+   outline: none
+}
+
+h1,h2,h3{
+   font-weight: normal;
+   margin-bottom: 0;
+   padding-top: 32px;
+}
+
+h4,h5,h6{
+   font-weight: normal;
+   margin-bottom: 0;
+   padding-top: 16px;
+}
+
+
+h2{
+   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 32px;
+   line-height: 160%;
+   color: var(--white);
+   margin-bottom: 0;
+}
+
+ul{
+   list-style: none;
+   padding: 0;
+   margin: 32px 0 0 0;
+}
+
+h3{
+   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 22px;
+   line-height: 160%;
+   color: var(--white);
+    margin-bottom: 0;
+}
+
+u{
+   text-decoration: none;
+   cursor: pointer;
+   color: var(--hint-text-color);
+}
+
+p{
+   margin-bottom: 0;
+   padding-top: 8px;
+}
+
+.fit{
+   height: fit-content !important;
+}
+
+body {
+   font-family: 'ParalucentW00', sans-serif;
+   background-color: var(--black);
+   color: var(--text-color);
+   font-size: 26px;
+   font-weight: 300;
+   line-height: 160%;
+   user-select: none;
+}
+
+.inverse{
+   background-color: var(--background-inverse) !important;
+   color: var(--text-color-inverse) !important;
+}
+
+.inverse-alt{
+   background-color: var(--background-inverse-alt) !important;
+   color: var(--text-color-inverse) !important;
+}
+
+.cosmos-content {
+   width: 100%;
+   height: 100%;
+}
+
+.cosmos-grid-container {
+   /* width: 100%;
+   max-width: 1280px;
+   margin: 0 auto; */
+   padding: 96px 0;
+   display: grid;
+   grid-template-columns: [start] minmax(0, 1fr) [wrapper-start] repeat(12, minmax(0, var(--grid-width))) [wrapper-end] minmax(0, 1fr) [end];
+   grid-gap: var(--grid-glutter);
+}
+
+.cosmos-grid-container.no-padding-top {
+   padding-top: 0;
+}
+.cosmos-grid-container.no-padding-bottom {
+   padding-bottom: 0;
+}
+
+.container {
+   /* max-width: calc(1120px - 2*var(--grid-width)); */
+   max-width: 1280px;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.top-bar {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 10;
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.top-nav {
+   padding: 40px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+.top-nav .nav-logo {
+   font-weight: bold;
+   font-size: 24px;
+   color: var(--white);
+   cursor: pointer;
+}
+
+.top-nav .nav-logo:hover {
+   color: var(--Red-5);
+}
+
+.top-nav .nav-logo span {
+   font-size: 14px;
+   font-weight: normal;
+}
+
+.top-nav .nav-links {
+   list-style: none;
+   display: flex;
+   margin: 0;
+   font-size: 22px;
+}
+
+.top-nav .nav-links li {
+   margin-left: 48px;
+   margin-bottom: 0;
+
+}
+
+.top-nav .nav-links li a {}
+
+.top-nav .navigation-show {
+   display: none;
+}
+
+/* Home slide */
+
+.home-slider{
+   grid-column-start: wrapper-start;
+   width: 100%;
+   grid-column-end: span 8;
+   grid-row: 1;
+   height: calc(100vh - 80px);
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.home-slider.end{
+   justify-content: flex-end;
+}
+
+.home-slider.start{
+   justify-content: start;
+}
+
+
+
+.home-slider .clear-fix {
+   margin-bottom: 192px;
+}
+
+.home-slider h1 {
+   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 48px;
+   line-height: 160%;
+   color: var(--white);
+   /* margin-bottom: 32px; */
+}
+
+h1.mega{
+   font-size: 48px;
+}
+
+h1.supra {
+   font-size: 64px;
+}
+
+.cosmo-text-button {
+   padding: 16px 16px;
+   background-color: var(--background-blured);
+   border: 1px solid var(--border-blured-color);
+   border-radius: var(--global-radius);
+   font-size: 18px;
+   margin-top: 32px;
+   cursor: pointer;
+   display: inline-block;
+    line-height: 1;
+}
+
+.cosmo-text-tag {
+   display: inline-block;
+    padding: 0px 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    /* font-weight: bold; */
+    background-color: var(--background-blured);
+    border: 1px solid var(--border-blured-color);
+    border-radius: var(--global-radius);
+    font-size: 14px;
+    font-size: 15px;
+
+}
+
+
+.cosmo-text-button.no-back,.cosmo-text-tag.no-back{
+   padding: 0 !important;
+   background-color: transparent !important;
+   border: none !important;
+   border-radius: 0 !important;
+}
+.cosmo-text-button .button-text {}
+
+.cosmo-text-button .icon {
+   margin-left: 8px;
+   margin-top: 10px;
+   font-size: 76%
+      /* display: inline-block;*/
+}
+
+.call-us {
+   font-size: 14px
+}
+
+/* Notification */
+.notification.fixed {
+   position: fixed;
+   bottom: 48px;
+   right: 48px;
+}
+
+.notification {
+   padding: 16px 64px 16px 16px;
+   height: auto;
+   max-width: 464px;
+   border-radius: var(--global-radius);
+   background-color: var(--background-blured);
+   border: 1px solid var(--border-blured-color);
+   position: relative;
+   visibility: hidden;
+}
+
+.notification .image-side {}
+
+.notification .notification-content {}
+
+.notification .notification-content h1 {
+   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 16px;
+   line-height: 160%;
+   margin-bottom: 8px;
+}
+
+.notification .notification-content p {
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 160%;
+   margin-bottom: 8px;
+}
+
+.notification .readmore {
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 160%;
+}
+
+.notification .readmore span {
+   margin-left: 8px;
+   font-size: 76%
+}
+
+.notification .action-button {}
+
+
+.squared-button {
+   position: absolute;
+   width: 32px;
+   height: 32px;
+   top: 16px;
+   right: 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: var(--global-radius);
+   color: #000 !important
+}
+
+.wwa{
+   margin-bottom: 64px;
+}
+
+.wwa h1,.hcl h1 {
+   font-family: 'Sharp Grotesk DB Cyr Medium 22';
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 38px;
+   grid-column-start: wrapper-start;
+   grid-column-end: span 4;
+   grid-row: 1;
+   color : var(--white);
+   line-height: 180%;
+}
+
+.wwa .wwa-text,.hcl .hcl-contents{
+   grid-column-start:inherit ;
+   grid-column-end: span 8;
+   grid-row: 1;
+}
+
+.wwa .wwa-text p{
+   line-height: 180%;
+    opacity: .8;
+    font-size: 26px;
+}
+
+.wwa-items{}
+.wwa-items .wwa-item:nth-child(1){
+   grid-column-start: wrapper-start;
+}
+.wwa-items .wwa-item{
+   grid-column-start: inherit;
+   grid-column-end: span 4;
+   grid-row: 1;
+}
+
+.wwa-items .wwa-item .illustration{
+   width: 52px;
+   height: 52px;
+   margin-bottom: 32px;
+}
+
+.wwa-items .wwa-item img{
+   margin-bottom: 0;
+}
+.wwa-items .wwa-item h1{
+   font-family: 'Sharp Grotesk DB Cyr Medium 22';
+   font-size: 26px;
+   line-height: 160%;
+   cursor: pointer;
+}
+
+.wwa-items .wwa-item h1:hover{
+   color: var(--white);
+}
+.wwa-items .wwa-item p{
+   font-size: 24px;
+   line-height: 180%;
+   opacity: .6;
+}
+
+.wwa-items .wwa-item p:hover{
+   opacity: 1;
+   cursor: pointer;
+}
+
+.hcl{}
+.hcl h1{
+
+}
+.hcl .hcl-contents{
+   
+}
+.hcl .hcl-contents p{
+   font-size: 32px;
+   line-height : 180%;
+   font-family: 'ParalucentW00', sans-serif;
+
+}
+.hcl .hcl-contents .items{}
+.hcl .hcl-contents .items .item{}
+
+.footer-content{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+/* 
+.hire{
+   margin-bottom: 64px;
+} */
+
+.hire {
+   grid-column-start: wrapper-start;
+   width: 100%;
+   grid-column-end: span 12;
+   grid-row: 1;
+   height: 40vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.separator{
+   height: 1px;
+   width: 100%;
+   border-bottom:1px solid var(--border-blured-color);
+}
+
+.hire h1 {
+   text-align: center;
+   font-family: 'Sharp Grotesk DB Cyr Medium 22';
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 38px;
+   grid-column-start: wrapper-start;
+   /* grid-column-end: span 12;
+   grid-row: 1; */
+   color : var(--white);
+   line-height: 160%;
+}
+
+.hire-text{
+   text-align: center;
+}
+
+.footer-linkgroup{
+   list-style: none;
+}
+
+.footer-linkgroup .link-group{
+   grid-column-start: inherit;
+   grid-column-end: span 3;
+   grid-row: 1;
+}
+
+
+.footer-linkgroup .link-group.two-column{
+   display: flex;
+}
+
+.footer-linkgroup .link-group.two-column .column{
+   width: calc(50% - 32px);
+}
+
+.footer-linkgroup .link-group.two-column .column:nth-child(1){
+   margin-right: 32px;
+}
+
+.footer-linkgroup .link-group:nth-child(1) {
+   grid-column-start: wrapper-start;
+}
+
+
+.contact-info{
+   display: flex;
+   flex-direction: column;
+   /* margin-bottom: 16px; */
+}
+
+.contact-info h4 .dash-line{
+   color: var(--Grey-5);
+   letter-spacing: -5px;
+   padding-right: 16px;
+   font-weight: 100;
+}
+
+
+.contact-info h4{
+   font-family: 'Sharp Grotesk DB Cyr Book 22', sans-serif;
+   font-style: normal;
+   /*font-weight: bold;*/
+   font-size: 18px;
+   line-height: 160%;
+   color: var(--white);
+}
+
+.contact-info p{
+   font-size: 18px;
+   margin-bottom: 0;
+}
+
+.copyright{
+   font-size : 16px;
+   opacity : .7;
+   line-height: 120%;
+   grid-column-start: inherit;
+   grid-column-end: span 8;
+   grid-row: 1;
+   grid-column-start: wrapper-start;
+}
+
+.wks{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   grid-column-start: inherit;
+   grid-column-end: span 12;
+   grid-row: 1;
+   grid-column-start: wrapper-start;
+
+   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". ." ". ." ;
+}
+
+.wks .wk{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 128px;
+}
+
+.wks .wk:nth-child(1),.wks .wk:nth-child(2){
+   margin-top: 0;
+}
+
+
+.wks .wk .project-content{
+   width: 480px;
+   height: fit-content;
+}
+
+.wks .wk .project-content .project-thumb{
+   width: 480px;
+   min-height: 590px;
+   height: fit-content;
+   background-color: var(--Blue-10);
+}
+
+
+.wks .wk .project-content .project-client-name{
+   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-style: normal;
+}
+
+.wks .wk .project-content .project-subtitle{
+   font-family: 'Sharp Grotesk DB Cyr Book 22', sans-serif;
+   font-style: normal;
+   font-size: 20px;
+   line-height: 160%;
+   width: calc(100% - 64px);
+}
+
+.ab{
+   grid-column-start: wrapper-start;
+   width: 100%;
+   grid-column-end: span 12;
+   grid-row: 1;
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+}
+
+.ab .wwd{
+   padding:64px;
+   background-color: var(--Blue-10);
+   width: 60%;
+
+}
+
+.ab .ab-ill{
+   width: 70%;
+}
+
+/* 
+   Hover state and animation
+*/
+
+
+.cosmo-text-button:hover,
+.cosmo-text-tag:hover{
+   /* background-color:var(--background-hover);
+   color:var(--text-color-hover); */
+   transform: scale(var(--transform-scale-ratio));
+}
+
+/* 
+   Transition and annimation
+*/
+
+.cosmos-grid-container h1, 
+.cosmos-grid-container h2,
+.cosmos-grid-container h3,
+.cosmos-grid-container h4,
+.cosmos-grid-container p
+{
+   /* border : 1px solid red */
+}

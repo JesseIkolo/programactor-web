@@ -1,0 +1,72 @@
+{
+   "conversation": 
+       {
+       "title" : "get_info",
+       "interactions" : 
+           [
+               {
+                   "question": 
+                   {
+                       "id":0,
+                       "value" : "Quel est votre nom ?",
+                       "label" : "nom"
+                   },
+                   "pipe": "textbox",
+                   "response" : "Jesse Ikolo"
+               },
+               {
+                   "question": 
+                   {
+                       "id":0,
+                       "value" : "Quel est votre Prenom ?",
+                       "label" : "prenom"
+                   },
+                   "pipe": "textbox",
+                   "response" : "José Bondenge"
+               },
+               {
+                   "question": 
+                   {
+                       "id":0,
+                       "value" : "Quel est votre entreprise ?",
+                       "label" : "company"
+                   },
+                   "pipe": "textbox",
+                   "response" : "not set"
+               },
+               {
+                  "question": 
+                  {
+                      "id":0,
+                      "value" : "Quel est votre interêt ?",
+                      "label" : "Interêts"
+                  },
+                  "pipe": "choice",
+                  "choices":
+                     [{
+                        "id" : 0,
+                        "value" : "UI/UX",
+                        "selected" : false
+                     },
+                     {
+                        "id" : 1,
+                        "value" : "Developpememt Mobile/web",
+                        "selected" : false
+                     },
+                     {
+                        "id" : 2,
+                        "value" : "Site web",
+                        "selected" : false
+                     },
+                     {
+                        "id" : 3,
+                        "value" : "Branding",
+                        "selected" : false
+                     }
+                     ],
+                  "response" : "not set"
+              }
+           
+           ]
+       }
+}
