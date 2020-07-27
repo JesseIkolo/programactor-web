@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { Children } from "react"
+import React from "react"
 import { Link} from "gatsby"
 // import Img from 'gatsby-image'
 
@@ -114,7 +114,7 @@ function Project(props){
     <div className="wk">
             <div className="project-content">
               <div class="project-thumb">
-              <img src={props.projectThumb}/>
+              <img src={props.projectThumb} alt="nothin to say"/>
               </div>
               <h5 class="project-client-name">
                 { props.clientName }

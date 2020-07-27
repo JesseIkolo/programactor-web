@@ -113,4 +113,4 @@ const Service = ({ data }) => {
   Service.defaultProps = {
     data: ``,
   }
-export  default Service
+export default Service

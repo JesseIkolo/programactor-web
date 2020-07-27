@@ -1,11 +1,11 @@
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import React from "react"
 // import { Link} from "gatsby"
 // import Img from 'gatsby-image'
 
 function CosmoIcon(props){
    if(props.alt){
-      if (props.icon =="loop"){
+      if (props.icon ==="loop"){
          return(
             <svg width="74" height="82" viewBox="0 0 74 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M40.5702 37.0133L27.8182 51.2531C18.409 61.76 0.999969 55.1043 0.999969 41.0001V41.0001C0.999969 
@@ -16,7 +16,7 @@ function CosmoIcon(props){
             </svg>
          )
       }
-      else if(props.icon == "africa"){
+      else if(props.icon === "africa"){
          return(
          <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
          <g clip-path="url(#clip0)">
@@ -33,7 +33,7 @@ function CosmoIcon(props){
          </svg>
          ) 
    }
-      else if(props.icon == "computer"){
+      else if(props.icon === "computer"){
          return(
          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30.8594 33.7891C30.3204 33.7891 29.8828 34.2266 29.8828 34.7656C29.8828 35.3046 30.3204 35.7422 30.8594 35.7422C31.3984 35.7422 31.8359 35.3046 31.8359 34.7656C31.8359 34.2266 31.3984 33.7891 30.8594 33.7891Z" fill="#3f53d9"  className="inv"/>
@@ -43,7 +43,7 @@ function CosmoIcon(props){
          </svg>
          )      
       }
-      else if(props.icon == "focus"){
+      else if(props.icon === "focus"){
          return(
          <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="27" cy="27" r="14" stroke="#3f53d9" stroke-width="2"/>
@@ -55,7 +55,7 @@ function CosmoIcon(props){
          </svg>
          )
    }
-      else if(props.icon == "partner"){
+      else if(props.icon === "partner"){
          return(
          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25 35.6836C22.4115 35.6836 20.3125 33.5849 20.3125 30.9961C20.3125 28.4076 22.4115 26.3086 25 26.3086C27.5885 26.3086 29.6875 28.4076 29.6875 30.9961C29.6848 33.584 27.5879 35.6808 25 35.6836ZM25 27.8711C23.2742 27.8711 21.875 29.2703 21.875 30.9961C21.875 32.7219 23.2742 34.1211 25 34.1211C26.7258 34.1211 28.125 32.7219 28.125 30.9961C28.125 29.2703 26.7258 27.8711 25 27.8711Z" fill="#3f53d9"  className="inv"/>
@@ -72,7 +72,7 @@ function CosmoIcon(props){
       }
    }
    else{
-      if (props.icon =="loop"){
+      if (props.icon ==="loop"){
          return(
             <svg width="74" height="82" viewBox="0 0 74 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M40.5702 37.0133L27.8182 51.2531C18.409 61.76 0.999969 55.1043 0.999969 41.0001V41.0001C0.999969 
@@ -83,7 +83,7 @@ function CosmoIcon(props){
             </svg>
          )
       }
-      else if(props.icon == "africa"){
+      else if(props.icon === "africa"){
          return(
          <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
          <g clip-path="url(#clip0)">
@@ -100,7 +100,7 @@ function CosmoIcon(props){
          </svg>
          ) 
    }
-      else if(props.icon == "computer"){
+      else if(props.icon === "computer"){
          return(
          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30.8594 33.7891C30.3204 33.7891 29.8828 34.2266 29.8828 34.7656C29.8828 35.3046 30.3204 35.7422 30.8594 35.7422C31.3984 35.7422 31.8359 35.3046 31.8359 34.7656C31.8359 34.2266 31.3984 33.7891 30.8594 33.7891Z" fill="#FEECB3"  className="inv"/>
@@ -110,7 +110,7 @@ function CosmoIcon(props){
          </svg>
          )      
       }
-      else if(props.icon == "focus"){
+      else if(props.icon === "focus"){
          return(
          <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="27" cy="27" r="14" stroke="#FEECB3" stroke-width="2"/>
@@ -122,7 +122,7 @@ function CosmoIcon(props){
          </svg>
          )
    }
-      else if(props.icon == "partner"){
+      else if(props.icon === "partner"){
          return(
          <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25 35.6836C22.4115 35.6836 20.3125 33.5849 20.3125 30.9961C20.3125 28.4076 22.4115 26.3086 25 26.3086C27.5885 26.3086 29.6875 28.4076 29.6875 30.9961C29.6848 33.584 27.5879 35.6808 25 35.6836ZM25 27.8711C23.2742 27.8711 21.875 29.2703 21.875 30.9961C21.875 32.7219 23.2742 34.1211 25 34.1211C26.7258 34.1211 28.125 32.7219 28.125 30.9961C28.125 29.2703 26.7258 27.8711 25 27.8711Z" fill="#FEECB3"  className="inv"/>
@@ -137,7 +137,7 @@ function CosmoIcon(props){
          </svg>
          )
       }
-      else if(props.icon == "arrow-right"){
+      else if(props.icon === "arrow-right"){
          return(
             <svg version="1.1"  width={props.w} height={props.h} viewBox="0 0 20 20">
                <path fill="#000000" d="M19.354 10.146l-6-6c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5.146 5.146h-16.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h16.293l-5.146 5.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l6-6c0.195-0.195 0.195-0.512 0-0.707z"></path>

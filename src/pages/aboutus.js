@@ -112,4 +112,4 @@ const Aboutus =({ data }) => {
   Aboutus.defaultProps = {
     data: ``,
   }
-export  default Aboutus
+export default Aboutus

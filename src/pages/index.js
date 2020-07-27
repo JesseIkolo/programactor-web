@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Img } from 'gatsby'
+// import { graphql, Img } from 'gatsby'
 import Layout from '../components/layout'
 import {TextButton, Notification, Para} from '../components/molecule'
 import {CosmoIcon} from '../components/cosmoIcon'
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
                 We hope you are OK with that."
                 readmore={true}
                 readmoreTo="/Policy"
-                style="fixed"
+                notyStyle="fixed"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
                 <h1>Who we<br/> are ?</h1>
                 <div className="wwa-text">
                 <Para className="Para">
-                Programactor is an human centered design and digital brand agency based in Douala, in Cameroon. We have 10+ devs and design experts on board and 5+ years of experience in building digital projects from scratch or refreshing existing ones.
+                Programactor is an human centered design and digital brand studio based in Douala, in Cameroon. We have 10+ devs and design experts on board and 5+ years of experience in building digital projects from scratch or refreshing existing ones.
       We keep up with the times, always sticking to the newest trends in design and development.
                 </Para>
                 <TextButton 

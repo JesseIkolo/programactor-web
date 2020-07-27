@@ -2,23 +2,22 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) =>(
-    <>
+const Header = ({ siteTitle }) => (
   <header className="top-bar">
       <div className="container top-nav">
           <div className="nav-logo">Programactor.<span>design</span></div>
           <ul className="nav-links">
           <li>
-              <Link to="./works">Works</Link>
+              <Link to="works">Works</Link>
             </li>
             <li>
-              <Link to="./aboutus">About Us</Link>
+              <Link to="aboutus">About Us</Link>
             </li>
             <li>
-              <Link to="./service">Services</Link>
+              <Link to="service">Services</Link>
             </li>
             <li>
-              <Link to="./contact">Contact Us</Link>
+              <Link to="contact">Contact Us</Link>
             </li>
           </ul>
           <div className="navigation-show"></div>
@@ -43,9 +42,7 @@ const Header = ({ siteTitle }) =>(
       </h1>
     </div> */}
   </header>
-  </>
-  )
-
+)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import "./conversation.css"
 import "./globals.css"
 import "../assets/fonts/font-styles.css"
@@ -188,7 +188,7 @@ Conversation.propTypes = {
                      />
                )
             }
-            <div className="cc-el-button"  onClick={e => this.goToNextSlide(e)}>
+            <div role="button" className="cc-el-button" onKeyDown={e => this.goToNextSlide(e)} onClick={e => this.goToNextSlide(e)}>
                <CosmoIcon icon="arrow-right" h="22" w="22"/>
             </div>
          </form>
@@ -201,7 +201,7 @@ Conversation.propTypes = {
       <div 
       // className={dataindex===0 ? ("cc-progressive-form-el actived"):("cc-progressive-form-el")} 
       className={
-         index == activeIndex
+         index === activeIndex
             ? "cc-progressive-form-el actived"
             : "cc-progressive-form-el"
       }

@@ -11,15 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import {Container} from "./molecule"
-import "./layout.css"
-import "./globals.css"
-import "../assets/fonts/font-styles.css"
-import "../assets/fonts/ionicons.css"
 
-// console.log('---Header', Header);
-// console.log('---Footer', Footer);
-// console.log('---Container', Container);
+import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

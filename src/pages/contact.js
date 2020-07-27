@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Layout from "../components/layout"
-import Footer from "../components/footer"
-import SEO from "../components/seo"
-import {TextButton, BeautifulLink} from '../components/molecule'
-import {CosmoIcon} from '../components/cosmoIcon'
+// import Layout from "../components/layout"
+// import Footer from "../components/footer"
+// import SEO from "../components/seo"
+// import {TextButton, BeautifulLink} from '../components/molecule'
+// import {CosmoIcon} from '../components/cosmoIcon'
 import {Conversation, Progressive} from "../components/cosmoConv"
 
 
@@ -32,4 +32,4 @@ const JSON =  require("../components/mooks/interactions.json")
   Contact.defaultProps = {
     data: ``,
   }
-export  default Contact
+export default Contact
