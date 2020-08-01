@@ -21,6 +21,7 @@ const IndexPage = ({ data }) => {
                 icon="ion-ios-arrow-right" 
                 text="Let's create something together"
                 background={true}
+                to="https://wa.link/85brqs"
                 />
               </Para>
               <span className="call-us">or just call us at <b>00 237 669 227 976</b></span>
