@@ -77,8 +77,8 @@ function Notification(props) {
 function ContactInfo(props) {
   return (
     <div className="contact-info">
-      <h4>{props.title}</h4>
-      <p>{props.text} <br/>
+      <h4 >{props.title}</h4>
+      <p >{props.text} <br/>
         { props.subText ? (
             <span>{props.subText}</span>
         ): null }
@@ -91,7 +91,7 @@ function BeautifulLink(props) {
   return (
    
       <div className="contact-info">
-        <h4>
+        <h4 >
         {props.dash ? (<span className="dash-line">——</span>):null}
           <Link to={props.to}>
             {props.text}
@@ -103,7 +103,7 @@ function BeautifulLink(props) {
 
 function Tag(props){
   return (
-    <div className={props.background ? ("cosmo-text-tag"):("cosmo-text-tag no-back")}>
+    <div className={props.background  ? ("cosmo-text-tag "):("cosmo-text-tag no-back " )}>
       {props.for}
     </div>
   )

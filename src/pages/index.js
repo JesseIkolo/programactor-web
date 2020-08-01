@@ -6,14 +6,14 @@ import {CosmoIcon} from '../components/cosmoIcon'
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
-  
+    
     return (
       <>
         <Layout>
           <SEO title="Programactor.design — Works" />
           <div className="cosmos-grid-container">
             <div className="home-slider end">
-              <h1>
+              <h1 className="intro-loop">
               Designing premium Brand/Interface and Developing users-friendly Mobile/Web Apps since 2015.
               </h1>
               <Para>
