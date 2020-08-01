@@ -66,6 +66,7 @@ const Footer = ({ siteTitle }) =>{
                icon="ion-ios-arrow-right" 
                text="Let's create something together"
                background={true}
+               to="https://wa.link/85brqs"
                />
             </div>
          </div>
@@ -175,7 +176,7 @@ const Footer = ({ siteTitle }) =>{
                to=""/>
                <BeautifulLink
                text="Whatsapp Pro"
-               to=""/>
+               to="https://wa.link/85brqs"/>
          </div>
       </div>
       <div className="cosmos-grid-container">
