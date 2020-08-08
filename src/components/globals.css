@@ -622,6 +622,20 @@ h1.supra {
 }
 
 .pool{
-   opacity: 0;
-   transform: translateY(-50px);
+   /* opacity: 0;
+   transform: translateY(-50px); */
 }
+
+.ml11 .text-wrapper {
+   position: relative;
+   display: inline-block;
+   padding-top: 0.1em;
+   padding-right: 0.05em;
+   padding-bottom: 0.15em;
+ }
+
+ .ml11 .letter {
+   display: inline-block;
+   line-height: 1em;
+ }
+ 

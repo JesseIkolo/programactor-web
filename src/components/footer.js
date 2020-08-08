@@ -3,9 +3,16 @@ import PropTypes from "prop-types"
 import React from "react"
 import {TextButton,ContactInfo,BeautifulLink,Tag} from '../components/molecule'
 import anime from 'animejs/lib/anime.es.js';
+import VizSensor from 'react-visibility-sensor';
 
 
-const Footer = ({ siteTitle }) =>{
+class Footer extends React.Component{
+   constructor(props){
+      super(props);
+      // this.state = {
+      //    isVisible: false
+      //  }
+   }
 // var derniere_position_de_scroll_connue = 0;
 // var ticking = false;
 
@@ -48,68 +55,136 @@ const Footer = ({ siteTitle }) =>{
 //    ticking = true;
 // });
 
-  
+state = {
+   isVisible: false
+ }
+
+handleViz = (isVisible) => {
+   if(this.state.isVisible){
+      this.setState({isVisible: false})
+   }else{
+      this.setState({isVisible: true})
+   }
+   console.log(isVisible)
+}
+introRef = React.createRef();
+introTextAnimation(ref, visible) {
+   var animation;
+   if (visible) {
+      console.log(ref);
+      
+      // Wrap every letter in a span
+      var textWrapper = document.querySelectorAll('.ml11 .letters');
+      textWrapper.forEach(element => {
+         element.innerHTML = element.textContent.replace(/[^\x00-\x20]/g, "<div class='letter'>$&</div>");
+
+      });
+      animation = anime.timeline({
+            loop: true,
+            delay: 3000
+         })
+         .add({
+            targets: '.ml11 .text-wrapper .letter',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 600,
+            offset: '-=775',
+            delay: (el, i) => 30 * (i + 1)
+         })
+         .add({
+            targets: ['.' + ref.introRef.className + ' .intro-pool p',
+               '.' + ref.introRef.className + ' .intro-pool a'
+            ],
+            translateY: ['50px', 0],
+            opacity: ['0', '1'],
+            easing: "cubicBezier(0.91,0.02,0.52,0.7)",
+            duration: 700,
+            delay: (el, i) => 300 * (i + 1),
+            complete :() => {
+               console.log(this.ref)
+            }
+         })
+         
+   }
+}
+  render(){
  return(
- <div className="inverse-alt footer" data-sal="slide-up"
- data-sal-delay="300"
- data-sal-easing="ease"id="footer" data-sal="slide-up">
+
+ <div className="inverse-alt footer" >
+      <VizSensor
+   onChange={(isVisible) => {
+      this.setState({imgViz: isVisible});
+      console.log(isVisible);
+      this.introTextAnimation(this.refs, isVisible);
+    }}>
       <div className="cosmos-grid-container">
-         <div className="hire">
-            <h1>
-               You have a projet, a product <br/>or a services in mind ? <br/>
+         <div className="hire" ref="introRef">
+            <h1 class="ml11 supra">
+            <span class="text-wrapper">
+
+               <span class="letters">
+                  Have a projet, a product 
+               </span>
+               <br/>
+               <span class="letters">
+                  or a services in mind ? 
+               </span>
+            </span>
             </h1>
-            <div className="hire-text">
+
+            <div className="hire-text intro-pool">
+
                <p>
                   Old or new, We will be proud to talk about it, and implement your vision.
                </p>
-               <TextButton 
-               icon="ion-ios-arrow-right" 
+               <TextButton
+               icon="ion-ios-arrow-right"
                text="Let's create something together"
                background={true}
-               to="https://wa.link/85brqs"
-               />
+               to="https://wa.link/85brqs"/>
             </div>
          </div>
       </div>
+      </VizSensor>
       <div className="separator"></div>
       <div className="cosmos-grid-container footer-linkgroup">
          <div className="link-group pool">
             <h3 >
                <u>Human centered design</u> and <u>digital brand</u> agency based in Douala, Cameroun.
             </h3>
-            <Tag 
+            <Tag
                for="Brand Design"
                background={true}
             />
-            <Tag 
+            <Tag
                for="Product Design"
                background={true}
             />
-            <Tag 
+            <Tag
                for="Web & Mobile Development"
                background={true}
             />
-            <Tag 
+            <Tag
                for="Research & Analytics"
                background={true}
             />
          </div>
          <div className="link-group pool">
             <h3 >Contact Us —</h3>
-            <ContactInfo 
+            <ContactInfo
                title="A meet at office ?"
                text="Rue des Princes, Bali,"
                subText="Douala 1er, Littoral, Cameroun."
             />
-            <ContactInfo 
+            <ContactInfo
                title="Want to mail us ?"
                text="hello@programactor.com"
             />
-            <ContactInfo 
+            <ContactInfo
                title="Or join our team ?"
                text="carreer@programactor.com"
             />
-            <ContactInfo 
+            <ContactInfo
                title="Maybe a call/whatsapp ?"
                text="00237 669 22 79 76"
             />
@@ -186,15 +261,9 @@ const Footer = ({ siteTitle }) =>{
          </p>
       </div>
   </div>
-)
+
+)}
 }
 
-Footer.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Footer.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Footer
