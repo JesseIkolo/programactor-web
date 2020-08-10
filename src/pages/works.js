@@ -8,7 +8,7 @@ const Works = ({ data }) => {
   return(
     <>
     <Layout>
-      <SEO title="Programactor.design — Works" />
+      <SEO title="Works" />
       <div className="cosmos-grid-container inverse">
         <div className="home-slider fit">
           <div className="clear-fix"></div>

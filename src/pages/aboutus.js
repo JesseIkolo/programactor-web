@@ -10,7 +10,7 @@ const Aboutus =({ data }) => {
   return(
   <>
     <Layout>
-    <SEO title="Programactor.design — Works" />
+    <SEO title=" About us" />
     <div className="cosmos-grid-container inverse">
       <div className="home-slider">
         <div className="clear-fix"></div>

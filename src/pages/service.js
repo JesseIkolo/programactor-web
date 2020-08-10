@@ -11,7 +11,7 @@ const Service = ({ data }) => {
   return(
   <>
     <Layout>
-    <SEO title="Programactor.design — Works" />
+    <SEO title=" Our services" />
     <div className="cosmos-grid-container inverse">
       <div className="home-slider">
         <div className="clear-fix"></div>

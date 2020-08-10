@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
     return (
       <>
         <Layout>
-          <SEO title="Programactor.design — Works" />
+          <SEO title="Hello User"/>
           <div className="cosmos-grid-container">
             <div className="home-slider end">
               <h1 className="intro-loop">
