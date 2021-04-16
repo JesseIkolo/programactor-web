@@ -46,7 +46,7 @@ class Layout extends React.Component {
   
 
   componentDidMount(){
-    alert(this.props.inversed)
+    // alert(this.props.inversed)
     if(this.props.inversed){
       addClass(document.querySelector('header'), "inversed")
       addClass(document.querySelector('.cosmos-content'), "inversed")

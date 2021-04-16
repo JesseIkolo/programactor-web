@@ -167,7 +167,7 @@ introTextAnimation(ref, visible) {
                icon="ion-ios-arrow-right"
                text="Let's create something together"
                background={true}
-               to="https://wa.link/85brqs"/>
+               to="https://api.whatsapp.com/send?phone=237658338081&text=Bonjour%20a%20vous%20Programactor."/>
             </div>
          </div>
       </div>
@@ -277,7 +277,7 @@ introTextAnimation(ref, visible) {
                to=""/>
                <BeautifulLink
                text="Whatsapp Pro"
-               to="https://wa.link/85brqs"/>
+               to="https://api.whatsapp.com/send?phone=237658338081&text=Bonjour%20a%20vous%20Programactor."/>
          </div>
       </div>
       <div className="cosmos-grid-container">

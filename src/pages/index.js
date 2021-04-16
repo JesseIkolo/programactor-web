@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
                 icon="ion-ios-arrow-right" 
                 text="Let's create something together"
                 background={true}
-                to="https://wa.link/85brqs"
+                to="https://api.whatsapp.com/send?phone=237658338081&text=Bonjour%20a%20vous%20Programactor."
                 />
               </Para>
               <span className="call-us">or just call us at <b>00 237 658 33 80 81</b></span>
