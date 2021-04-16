@@ -9,7 +9,9 @@ import {CosmoIcon} from '../components/cosmoIcon'
 const Aboutus =({ data }) => {
   return(
   <>
-    <Layout>
+    <Layout
+    inversed = {true}
+    >
     <SEO title=" About us" />
     <div className="cosmos-grid-container inverse">
       <div className="home-slider">

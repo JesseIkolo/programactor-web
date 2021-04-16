@@ -8,7 +8,7 @@ import PropTypes from "prop-types"
 // import {Container} from "./molecule"
 import "./conversation.css"
 import "./globals.css"
-import "../assets/fonts/font-styles.css"
+import "../assets/fonts/font.css"
 import "../assets/fonts/ionicons.css"
 
 const Conversationheader = ({ type, url, title, subtitle})=> {

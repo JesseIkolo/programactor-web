@@ -24,9 +24,9 @@ h4,h5,h6{
 
 
 h2{
-   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-family: 'Neue Machina', sans-serif;
    font-style: normal;
-   /*font-weight: bold;*/
+   font-weight: bold;
    font-size: 32px;
    line-height: 160%;
    /* color: var(--white); */
@@ -40,9 +40,9 @@ ul{
 }
 
 h3{
-   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-family: 'Neue Machina', sans-serif;
    font-style: normal;
-   /*font-weight: bold;*/
+   font-weight: bold;
    font-size: 22px;
    line-height: 160%;
    /* color: var(--white); */
@@ -65,13 +65,22 @@ p{
 }
 
 body {
-   font-family: 'ParalucentW00', sans-serif;
-   background-color: var(--black);
-   color: var(--text-color);
+   font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+   
    font-size: 26px;
-   font-weight: 300;
+   font-weight: 400;
    line-height: 160%;
    user-select: none;
+}
+
+.cosmos-content{
+   background-color: var(--black);
+   color: var(--text-color);
+}
+
+.cosmos-content.inversed{
+   background-color: var(--background-inverse) !important;
+   color: var(--text-color-inverse) !important;
 }
 
 .inverse{
@@ -80,8 +89,15 @@ body {
 }
 
 .inverse-alt{
+   transition: all 500ms ease-in-out;
+   max-height: min-content;
+}
+
+.inverse-alt.alternate{
    background-color: var(--background-inverse-alt) !important;
    color: var(--text-color-inverse) !important;
+   transition: all 1000ms ease-in-out;
+
 }
 
 .cosmos-content {
@@ -93,7 +109,7 @@ body {
    /* width: 100%;
    max-width: 1280px;
    margin: 0 auto; */
-   padding: 96px 0;
+   padding: 128px 0;
    display: grid;
    grid-template-columns: [start] minmax(0, 1fr) [wrapper-start] repeat(12, minmax(0, var(--grid-width))) [wrapper-end] minmax(0, 1fr) [end];
    grid-gap: var(--grid-glutter);
@@ -111,6 +127,10 @@ body {
    max-width: 1280px;
    margin: 0 auto;
    width: 100%;
+}
+
+.inversed {
+   color: var(--text-color-inverse);
 }
 
 .top-bar {
@@ -131,9 +151,10 @@ body {
 }
 
 .top-nav .nav-logo {
+   font-family: 'Neue Machina', sans-serif;
    font-weight: bold;
    font-size: 24px;
-   color: var(--white);
+   /* color: var(--white); */
    cursor: pointer;
 }
 
@@ -193,9 +214,9 @@ body {
 }
 
 .home-slider h1 {
-   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
    font-style: normal;
-   /*font-weight: bold;*/
+   font-weight: bold;
    font-size: 48px;
    line-height: 160%;
    /* color: var(--white); */
@@ -279,9 +300,9 @@ h1.supra {
 .notification .notification-content {}
 
 .notification .notification-content h1 {
-   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
    font-style: normal;
-   /*font-weight: bold;*/
+   font-weight: bold;
    font-size: 16px;
    line-height: 160%;
    margin-bottom: 8px;
@@ -328,9 +349,9 @@ h1.supra {
 }
 
 .wwa h1,.hcl h1 {
-   font-family: 'Sharp Grotesk DB Cyr Medium 22';
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22';
    font-style: normal;
-   /*font-weight: bold;*/
+   font-weight: bold;
    font-size: 38px;
    grid-column-start: wrapper-start;
    grid-column-end: span 4;
@@ -371,7 +392,8 @@ h1.supra {
    margin-bottom: 0;
 }
 .wwa-items .wwa-item h1{
-   font-family: 'Sharp Grotesk DB Cyr Medium 22';
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22';
+   font-weight: bold;
    font-size: 26px;
    line-height: 160%;
    cursor: pointer;
@@ -438,9 +460,9 @@ h1.supra {
 
 .hire h1 {
    text-align: center;
-   font-family: 'Sharp Grotesk DB Cyr Medium 22';
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22';
    font-style: normal;
-   /*font-weight: bold;*/
+   font-weight: bold;
    font-size: 38px;
    grid-column-start: wrapper-start;
    /* grid-column-end: span 12;
@@ -496,7 +518,7 @@ h1.supra {
 
 
 .contact-info h4{
-   font-family: 'Sharp Grotesk DB Cyr Book 22', sans-serif;
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
    font-style: normal;
    /*font-weight: bold;*/
    font-size: 18px;
@@ -561,8 +583,9 @@ h1.supra {
 
 
 .wks .wk .project-content .project-client-name{
-   font-family: 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
+   font-family: 'Neue Machina', 'Sharp Grotesk DB Cyr Medium 22', sans-serif;
    font-style: normal;
+   font-weight : bold
 }
 
 .wks .wk .project-content .project-subtitle{

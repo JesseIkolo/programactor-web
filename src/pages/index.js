@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
           <div className="cosmos-grid-container">
             <div className="home-slider end">
               <h1 className="intro-loop">
-              Designing premium Brand/Interface and Developing users-friendly Mobile/Web Apps since 2015.
+              Designing premium Brand, Interface, and Developing <br/> users-friendly Mobile/Web <br/> Apps since 2015.
               </h1>
               <Para>
                 <TextButton 
@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
                 to="https://wa.link/85brqs"
                 />
               </Para>
-              <span className="call-us">or just call us at <b>00 237 669 227 976</b></span>
+              <span className="call-us">or just call us at <b>00 237 658 33 80 81</b></span>
               <div className="clear-fix"></div>
               <Notification
                 title="Cookie Policy"
@@ -88,9 +88,9 @@ const IndexPage = ({ data }) => {
           <div className="cosmos-grid-container hcl">
           <h1>We create <br/>brands people loves.</h1>
                 <div className="hcl-contents">
-                <h3>
+                <h2>
                 We make every experience people have with your business meaningful. We build brands with purpose, brands that impact the lives of millions, and brands that last.
-                </h3>
+                </h2>
                 <div className="items">
                   <div className="item">
                     

@@ -7,7 +7,9 @@ import {Project} from '../components/molecule'
 const Works = ({ data }) => {
   return(
     <>
-    <Layout>
+    <Layout
+      inversed = {true}
+    >
       <SEO title="Works" />
       <div className="cosmos-grid-container inverse">
         <div className="home-slider fit">

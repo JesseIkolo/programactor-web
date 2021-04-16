@@ -15,9 +15,23 @@ import Footer from "./footer"
 // import anime from 'animejs/lib/anime.es.js';
 
 import "./layout.css"
-let pool_array;
-let lastScrollY = 0;
-let ticking = false;
+
+function hasClass(ele,cls) {
+  return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,'');
+  }
+}
+
+
 class Layout extends React.Component {
   
   constructor(props){
@@ -28,48 +42,20 @@ class Layout extends React.Component {
     }
     
   }
-  componentDidMount(){
-    console.log('Loaded');
-    // window.addEventListener('scroll', this.handleScroll)
-    pool_array = document.querySelectorAll(".pool");
-  }
 
-  scrollRef = React.createRef();
   
-  handleScroll = () => {
-    lastScrollY = window.scrollY;
 
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        this.scrollRef.current.style.top = `${lastScrollY}px`;
-        ticking = false;
-      });
-   
-      ticking = true;
+  componentDidMount(){
+    alert(this.props.inversed)
+    if(this.props.inversed){
+      addClass(document.querySelector('header'), "inversed")
+      addClass(document.querySelector('.cosmos-content'), "inversed")
+
     }
-    console.log(ticking, lastScrollY)
-  };
-
-  listener=()=>{
-    var i=0;
-    
-    pool_array.forEach(el => {
-
-      if(i==0){
-        if( window.scrollY > window.pageYOffset - el.offsetHeight)console.log(window.scrollY,window.pageYOffset,">",el.pageYOffset - el.offsetHeight);
-        
-      }
-      i++
-    });
-    return window.scrollY
   }
 
-  getScrollPos(el) {
+  
 
-  }
-  setScrollPos(el,pos) {
-
-  }
 
   
   
@@ -78,8 +64,9 @@ class Layout extends React.Component {
     return(
       <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Header siteTitle={'data.site.siteMetadata.title'} />
-      <div className="cosmos-content" ref={this.scrollRef}>
+      
+      <div className="cosmos-content inverse-alt" ref={this.inversed}>
+         <Header siteTitle={'data.site.siteMetadata.title'} />
          <main className="">{this.props.children}</main>
       <Footer/>
       </div>

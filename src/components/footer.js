@@ -1,10 +1,24 @@
 
 import PropTypes from "prop-types"
 import React from "react"
-import {TextButton,ContactInfo,BeautifulLink,Tag} from '../components/molecule'
+import {TextButton,ContactInfo,BeautifulLink,Tag, Container} from '../components/molecule'
 import anime from 'animejs/lib/anime.es.js';
 import VizSensor from 'react-visibility-sensor';
 
+function hasClass(ele,cls) {
+   return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+ }
+ 
+ function addClass(ele,cls) {
+   if (!hasClass(ele,cls)) ele.className += " "+cls;
+ }
+ 
+ function removeClass(ele,cls) {
+   if (hasClass(ele,cls)) {
+     var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+     ele.className=ele.className.replace(reg,'');
+   }
+ }
 
 class Footer extends React.Component{
    constructor(props){
@@ -59,20 +73,33 @@ state = {
    isVisible: false
  }
 
+handleAlternate = (visible, alternator) => {
+   var alternator = document.querySelector('.inverse-alt');
+
+   if(visible){
+      addClass(alternator,'alternate');
+   }
+   else{
+      removeClass(alternator,'alternate');
+   }
+}
+
 handleViz = (isVisible) => {
    if(this.state.isVisible){
+     
       this.setState({isVisible: false})
    }else{
+      
       this.setState({isVisible: true})
    }
-   console.log(isVisible)
 }
 introRef = React.createRef();
+
 introTextAnimation(ref, visible) {
+   this.handleAlternate(visible);
    var animation;
+
    if (visible) {
-      console.log(ref);
-      
       // Wrap every letter in a span
       var textWrapper = document.querySelectorAll('.ml11 .letters');
       textWrapper.forEach(element => {
@@ -80,7 +107,7 @@ introTextAnimation(ref, visible) {
 
       });
       animation = anime.timeline({
-            loop: true,
+            loop: 1,
             delay: 3000
          })
          .add({
@@ -100,7 +127,7 @@ introTextAnimation(ref, visible) {
             easing: "cubicBezier(0.91,0.02,0.52,0.7)",
             duration: 700,
             delay: (el, i) => 300 * (i + 1),
-            complete :() => {
+            complete : () => {
                console.log(this.ref)
             }
          })
@@ -109,14 +136,13 @@ introTextAnimation(ref, visible) {
 }
   render(){
  return(
-
- <div className="inverse-alt footer" >
-      <VizSensor
-   onChange={(isVisible) => {
-      this.setState({imgViz: isVisible});
-      console.log(isVisible);
-      this.introTextAnimation(this.refs, isVisible);
-    }}>
+<VizSensor
+   partialVisibility
+      onChange={(isVisible) => {
+      // this.setState({imgViz: isVisible});
+      this.introTextAnimation(this.refs, isVisible);}}>
+ <div className="footer" >
+   
       <div className="cosmos-grid-container">
          <div className="hire" ref="introRef">
             <h1 class="ml11 supra">
@@ -145,7 +171,7 @@ introTextAnimation(ref, visible) {
             </div>
          </div>
       </div>
-      </VizSensor>
+   
       <div className="separator"></div>
       <div className="cosmos-grid-container footer-linkgroup">
          <div className="link-group pool">
@@ -260,7 +286,9 @@ introTextAnimation(ref, visible) {
             Programactor.design is the brand of Programactor Inc. company registered in Cameroon.
          </p>
       </div>
+  
   </div>
+  </VizSensor>
 
 )}
 }
