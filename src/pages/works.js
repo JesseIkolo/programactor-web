@@ -11,7 +11,7 @@ const Works = ({ data }) => {
       inversed = {true}
     >
       <SEO title="Works" />
-      <div className="cosmos-grid-container inverse">
+      <div className="cosmos-grid-container inverse rose">
         <div className="home-slider fit">
           <div className="clear-fix"></div>
           <h1 className="supra">

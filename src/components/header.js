@@ -8,16 +8,16 @@ const Header = ({ siteTitle }) => (
           <div className="nav-logo">Programactor.<span>design</span></div>
           <ul className="nav-links">
           <li>
-              <Link to="../works">Works</Link>
+              <Link to="../works" className="link link--elara"><span>Works</span></Link>
             </li>
             <li>
-              <Link to="../aboutus">About Us</Link>
+              <Link to="../aboutus" className="link link--elara"><span>About Us</span></Link>
             </li>
             <li>
-              <Link to="../service">Services</Link>
+              <Link to="../service" className="link link--elara"><span>Services</span></Link>
             </li>
             <li>
-              <Link to="../contact">Contact Us</Link>
+              <Link to="../contact" className="link link--elara"><span>Contact Us</span></Link>
             </li>
           </ul>
           <div className="navigation-show"></div>
