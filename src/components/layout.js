@@ -13,6 +13,7 @@ import {Helmet} from "react-helmet";
 import Header from "./header"
 import Footer from "./footer"
 // import anime from 'animejs/lib/anime.es.js';
+import {CosmoIcon} from '../components/cosmoIcon'
 
 import "./layout.css"
 
@@ -69,6 +70,12 @@ class Layout extends React.Component {
          <Header siteTitle={'data.site.siteMetadata.title'} />
          <main className="">{this.props.children}</main>
       <Footer/>
+      <div class="content__item">
+					<button class="button button--surtur">
+						<CosmoIcon icon="promoText"/>
+            <CosmoIcon icon="promoEyes"/>
+					</button>
+				</div>
       </div>
       </>
     )

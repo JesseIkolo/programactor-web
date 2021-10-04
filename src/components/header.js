@@ -4,7 +4,7 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header className="top-bar">
-      <div className="container top-nav">
+      <div className="cosmos-container top-nav">
           <div className="nav-logo">Programactor.<span>design</span></div>
           <ul className="nav-links">
           <li>

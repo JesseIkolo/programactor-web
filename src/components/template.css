@@ -56,8 +56,9 @@
    --border-blured-color: rgba(196, 196, 196, 0.2);
    --global-radius: 0;
    --text-color: #fff;
-   --grid-width: 64px;
-   --grid-glutter: 48px;
+   --grid-width: 80px;
+   --grid-gap: 24px;
+   --grid-glutter: 24px;
    --transform-scale-ratio : 1.05
 }
 
